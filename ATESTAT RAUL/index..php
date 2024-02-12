@@ -1,116 +1,16 @@
+<?php
+include("include/header.php");
+include("include/navbar.php");
+?>
+<?php
+include("include/footer.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoDeal</title>
-  <body>
-  <style>  
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-    h2 {
-      margin-top: 20px;
-      color: #fdfdfd; 
-    }
-    nav {
-      background-color: #444;
-      overflow: hidden;
-    }
-    nav a {
-      float: left;
-      display: block;
-      color: #fff;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    nav a:hover {
-      background-color: #ddd;
-      color: #333;
-     
-    }
-    .custom-section {
-      padding: 20px;
-      margin: 20px;
-    }
-    
-  </style>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/A_black_image.jpg/640px-A_black_image.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="https://us.123rf.com/450wm/themoderncanvas/themoderncanvas2308/themoderncanvas230800008/211186756-auto-sports-car-logo-motor-vehicle-silhouette-emblem-supercar-dealership-icon-automotive-dealer.jpg?ver=6" alt="Logo" height="0"width=100>
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-      header {
-        background-color: #f40000;
-        color: #fff;
-        text-align: left;
-        padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-    
-      header img {
-        height: 50px; 
-      }
-      nav {
-        background-color: #444;
-        overflow: hidden;
-      }
-      nav a {
-        float: left;
-        display: block;
-        color: #fff;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
-      nav a:hover {
-        background-color: #ddd;
-        color: #e90000;
-      }
-      .custom-section {
-        padding: 20px;
-        margin: 20px;
-      }
-      label {
-      color: #fff; 
-    }
-    </style>
-  <header>
-    <h1>AutoDeal</h1>
-  </header>
+
  
-  <nav>
-    <a href="#">Acasă</a>
-    <a href="#">Mașini</a>
-    <a href="#">Contact</a>
-    <a href="#">Vinde-ți Mașina</a>
-    <a href="#">Mașini pe Comandă</a>
-  </nav>
+  
   </header>
   </body>
   
@@ -127,43 +27,7 @@
     </form>
   </div>
 </nav>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      
-    }
-    main {
-      flex-grow: 1;
-      text-align: center;
-    }
-    .cautare-container {
-      text-align: center;
-      margin: 20px 0;
-    }
-    select, input {
-      padding: 10px;
-      margin-right: 10px;
-    }
-    button {
-      padding: 10px 20px;
-      background-color: #333;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      width: 100%;
-    }
-  </style>
+  
 </head>
 <div class="search-container">
   <form method="post" action="login.php">
@@ -195,64 +59,7 @@
 </nav>
   <div id="rezultateCautare"></div>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    .masina-container {
-      display: flex;
-      justify-content: flex-start;
-  
-      margin: 20px 0;
-      
-    }
-
-    .masina {
-      margin: 10px;
-      text-align: center;
-    }
-
-    img {
-      max-width: 75%;
-      height: auto;
-    }
-    .despre-noi, .vinde-masina, .comanda-masina {
-      margin: 20px 0;
-      text-align: center;
-    }
-    .despre-noi h2,
-    .vinde-masina h2 {
-      color: #ffffff; 
-    }
-    .despre-noi img {
-      order: 2; 
-    }
-
-    .despre-noi-content {
-      order: 1; 
-    }
-    .vinde-masina p,
-    .despre-noi-content p {
-      color: #ff0000; 
-    }
-    .cautare-container {
-      color: #ff0000; 
-    }
-
-    .comanda-masina p {
-      color: #ff0000; 
     
-    footer {
-      background-color: #d40202;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
