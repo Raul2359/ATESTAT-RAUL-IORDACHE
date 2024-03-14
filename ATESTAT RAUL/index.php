@@ -1,6 +1,6 @@
 <?php
 include("include/header.php");
-include("include/navbar.php");
+include("include/menu.php");
 ?>
 <?php
 include("include/footer.php");
@@ -24,6 +24,7 @@ include("include/footer.php");
       <br>
       <button type="submit">Conectare</button>
       <a href="#" style="color: white; margin-left: 10px;">Creează Cont</a>
+      <a href="inregistrare.php"type="button" class="btn btn-secondary">Creeaza cont</a>
     </form>
   </div>
 </nav>
