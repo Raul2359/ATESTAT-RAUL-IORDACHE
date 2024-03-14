@@ -14,20 +14,7 @@ include("include/footer.php");
   </header>
   </body>
   
-  <div>
-    <form method="post" action="login.php">
-      <label for="username">Utilizator:</label>
-      <input type="text" id="username" name="username" required>
-      <br>
-      <label for="password">Parolă:</label>
-      <input type="password" id="password" name="password" required>
-      <br>
-      <button type="submit">Conectare</button>
-      <a href="#" style="color: white; margin-left: 10px;">Creează Cont</a>
-      <a href="inregistrare.php"type="button" class="btn btn-secondary">Creeaza cont</a>
-    </form>
-  </div>
-</nav>
+
   
 </head>
 <div class="search-container">

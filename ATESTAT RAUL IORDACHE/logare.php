@@ -17,6 +17,7 @@
     </style>
   <header>
     <h1>AutoDeal</h1>
+    <a class="nav-link active"aria-current="page"href="index.php">Acasa</a>
   </header>
    
         <div class="row justify-content-center">
@@ -46,7 +47,7 @@
         <div class="row">
             <footer class="bg-dark text-light text-center py-3 mt-4">
                 <li class="nav-item">
-                  <a class="nav-link active"aria-current="page"href="index.php">Acasa</a>
+               
                 </li>
             </footer>
         </div>
