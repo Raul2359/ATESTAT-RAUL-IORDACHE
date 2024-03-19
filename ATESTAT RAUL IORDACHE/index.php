@@ -11,11 +11,6 @@ include("include/footer.php");
 
  
   
-  </header>
-  </body>
-  
-
-  
 </head>
 <div class="search-container">
   <form method="post" action="login.php">
