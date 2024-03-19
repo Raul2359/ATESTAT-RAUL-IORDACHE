@@ -10,8 +10,6 @@ include("include/footer.php");
 <html lang="en">
 
  
-  
-</head>
 <div class="search-container">
   <form method="post" action="login.php">
     <label for="brand">Marca:</label>
