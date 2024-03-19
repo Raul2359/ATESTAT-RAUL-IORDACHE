@@ -10,6 +10,26 @@ include("include/footer.php");
 <html lang="en">
 
  
+  
+  </header>
+  </body>
+  
+  <div>
+    <form method="post" action="login.php">
+      <label for="username">Utilizator:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Parolă:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="submit">Conectare</button>
+     
+      <a href="inregistrare.php"type="button" class="btn btn-secondary">Creeaza contu</a>
+    </form>
+  </div>
+</nav>
+  
+</head>
 <div class="search-container">
   <form method="post" action="login.php">
     <label for="brand">Marca:</label>
