@@ -24,7 +24,7 @@ include("include/footer.php");
       <br>
       <button type="submit">Conectare</button>
      
-      <a href="inregistrare.php"type="button" class="btn btn-secondary">Creeaza contu</a>
+      <a href="inregistrare.php"type="button" class="btn btn-secondary">Creeaza cont</a>
     </form>
   </div>
 </nav>
