@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Feb 05, 2024 at 08:13 PM
+-- Generation Time: Mar 24, 2024 at 01:33 PM
 -- Server version: 8.0.31
 -- PHP Version: 7.4.33
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `atestatraul`
 --
-CREATE DATABASE IF NOT EXISTS `atestatraul` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `atestatraul`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `atestatraul`;
 -- Table structure for table `anunturi`
 --
 
-DROP TABLE IF EXISTS `anunturi`;
 CREATE TABLE `anunturi` (
   `ID_Anunt` int NOT NULL,
   `ID_Masina` int DEFAULT NULL,
@@ -47,7 +44,7 @@ INSERT INTO `anunturi` (`ID_Anunt`, `ID_Masina`, `Nume_Vanzator`, `Telefon_Vanza
 (1, 1, 'John Doe', '0745632876', 'john.doe@email.com', 'Mașina în stare perfectă, unic proprietar.'),
 (2, 2, 'Jane Smith', '0738246438', 'jane.smith@gmail.com', 'Vând BMW X3, an 2022, stare impecabilă.'),
 (3, 3, 'Alex Johnson', '0723764675', 'alex.j@email.com', 'Mașină de lux Mercedes E-Class, vând urgent.'),
-(4, 4, 'Laura Johnson', '0725400631', 'laurajhs@gmail.com', 'BMW SERIA 3, perfect pentru mediul urban.');
+(4, 4, 'Laura Johnson', '0725400631', 'laurajhs@gmail.com', 'BMW SERIA 3, perfect pentru mediul urban.\r\n');
 
 -- --------------------------------------------------------
 
@@ -55,7 +52,6 @@ INSERT INTO `anunturi` (`ID_Anunt`, `ID_Masina`, `Nume_Vanzator`, `Telefon_Vanza
 -- Table structure for table `contact_dealer`
 --
 
-DROP TABLE IF EXISTS `contact_dealer`;
 CREATE TABLE `contact_dealer` (
   `ID_Contact_Dealer` int NOT NULL,
   `Nume_Dealer` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -76,7 +72,6 @@ INSERT INTO `contact_dealer` (`ID_Contact_Dealer`, `Nume_Dealer`, `Telefon_Deale
 -- Table structure for table `masini`
 --
 
-DROP TABLE IF EXISTS `masini`;
 CREATE TABLE `masini` (
   `ID_Masina` int NOT NULL,
   `Marca` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -104,10 +99,37 @@ INSERT INTO `masini` (`ID_Masina`, `Marca`, `Model`, `An_Fabricatie`, `Pret`, `D
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `poze_masini`
+--
+
+CREATE TABLE `poze_masini` (
+  `ID_Poza` int NOT NULL,
+  `ID_Masina` int DEFAULT NULL,
+  `Cale_Imagine` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `poze_masini`
+--
+
+INSERT INTO `poze_masini` (`ID_Poza`, `ID_Masina`, `Cale_Imagine`) VALUES
+(1, 4, 'https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.2_12.jpg'),
+(2, 4, 'https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.4_12.jpg'),
+(3, 4, 'https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.3_12.jpg'),
+(4, 4, 'https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.1_12.jpg'),
+(5, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/2lfnyye4x9cv2-RO/image;s=1000x700'),
+(6, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/wvbok0uyctx62-RO/image;s=1000x700'),
+(7, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/afe4baekjxp22-RO/image;s=1000x700'),
+(8, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/2lfnyye4x9cv2-RO/image;s=1000x700'),
+(9, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/wvbok0uyctx62-RO/image;s=1000x700'),
+(10, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/afe4baekjxp22-RO/image;s=1000x700');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `utilizatori`
 --
 
-DROP TABLE IF EXISTS `utilizatori`;
 CREATE TABLE `utilizatori` (
   `ID_Utilizator` int NOT NULL,
   `Nume_Utilizator` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
@@ -148,11 +170,28 @@ ALTER TABLE `masini`
   ADD PRIMARY KEY (`ID_Masina`);
 
 --
+-- Indexes for table `poze_masini`
+--
+ALTER TABLE `poze_masini`
+  ADD PRIMARY KEY (`ID_Poza`),
+  ADD KEY `ID_Masina` (`ID_Masina`);
+
+--
 -- Indexes for table `utilizatori`
 --
 ALTER TABLE `utilizatori`
   ADD PRIMARY KEY (`ID_Utilizator`),
   ADD UNIQUE KEY `Nume_Utilizator` (`Nume_Utilizator`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `poze_masini`
+--
+ALTER TABLE `poze_masini`
+  MODIFY `ID_Poza` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- Constraints for dumped tables
@@ -163,6 +202,12 @@ ALTER TABLE `utilizatori`
 --
 ALTER TABLE `anunturi`
   ADD CONSTRAINT `anunturi_ibfk_1` FOREIGN KEY (`ID_Masina`) REFERENCES `masini` (`ID_Masina`);
+
+--
+-- Constraints for table `poze_masini`
+--
+ALTER TABLE `poze_masini`
+  ADD CONSTRAINT `poze_masini_ibfk_1` FOREIGN KEY (`ID_Masina`) REFERENCES `masini` (`ID_Masina`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
