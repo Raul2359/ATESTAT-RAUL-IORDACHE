@@ -2,9 +2,7 @@
 include("include/header.php");
 include("include/menu.php");
 ?>
-<?php
-include("include/footer.php");
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -67,26 +65,23 @@ include("include/footer.php");
   <h2>MASINI PE STOC</h2>
 <div class="masina-container">
 <div class="masina">
-          <a href="detalii_masina4.html">
-            <img src="https://bradytrade.ro/uploads/masini-rulate/2023W49/1570-sdads-gallery-1-1015x677.jpg" alt="Masina 4">
-            <p>BMW SERIA 3</p>
-          </div>
-    <div class="masina">
-      <a href="detalii_masina3.html">
-        <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjJvaWg3ZWU0Y2ttNi1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.70I09RsqGcGKLXEYIMd7MdtzBX9BQSD_xhOPg0bBA5U/image" alt="Masina 3">
-        <p>Mercedes E-Class</p>
-      </div>
-    <div class="masina">
-      <a href="detalii_masina2.html">
-        <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjBqeXNyNXlsNGRhdTEtQVVUT1ZJVFJPIiwidyI6W3siZm4iOiJxN216NTNiaWZwemstQVVUT1ZJVFJPIiwicyI6IjE2IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.4VaKmDLkyQ-DCo-9RQWg8VKy0o5CxO1CrYYThOBh2WM/image">
-        <p>AUDI A3</p>
-    </div>
-    <div class="masina">
-      <a href="detalii_masina1.html">
-        <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InIzZjl4ZXM2ZXIzdi1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.t8IzclIOWnMDPpV0M05rbRBVg3Jnj9jawehS3tIhf5A/image" alt="Masina 1">
-        <p>BMW X3</p>
-     </a>
-    </div>
+    <a href="masina1.php?id_masina=4">
+        <img src="https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.1_12.jpg" alt="BMW SERIA 3">
+        <h2>BMW SERIA 3</h2>
+        
+ 
+
+    <a href="masina1.php?id_masina=1">
+        <img src="https://frankfurt.apollo.olxcdn.com/v1/files/snazp1nz4rdy-RO/image;s=1000x700" alt="Audi A4">
+        <h2>Audi A4</h2>
+   
+    <a href="masina1.php?id_masina=3">
+        <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjJvaWg3ZWU0Y2ttNi1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.70I09RsqGcGKLXEYIMd7MdtzBX9BQSD_xhOPg0bBA5U/image" alt="Mercedes E-class">
+        <h2>Mercedes E-CLASS</h2>
+    </a>
+</a>
+</a>
+</div>
     </div>
   <div class="despre-noi">
     <h2>Despre Noi</h2>
