@@ -7,7 +7,7 @@ include("include/menu.php");
 $servername = "localhost";
 $username = "root";
 $password = "mysql";
-$database = "atestatraul";
+$database = "atestatraul (2)";
 
 $conn = new mysqli($servername, $username, $password, $database);
 
