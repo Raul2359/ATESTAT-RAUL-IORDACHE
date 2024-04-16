@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 24, 2024 at 01:33 PM
+-- Generation Time: Apr 16, 2024 at 06:46 PM
 -- Server version: 8.0.31
 -- PHP Version: 7.4.33
 
@@ -45,6 +45,33 @@ INSERT INTO `anunturi` (`ID_Anunt`, `ID_Masina`, `Nume_Vanzator`, `Telefon_Vanza
 (2, 2, 'Jane Smith', '0738246438', 'jane.smith@gmail.com', 'Vând BMW X3, an 2022, stare impecabilă.'),
 (3, 3, 'Alex Johnson', '0723764675', 'alex.j@email.com', 'Mașină de lux Mercedes E-Class, vând urgent.'),
 (4, 4, 'Laura Johnson', '0725400631', 'laurajhs@gmail.com', 'BMW SERIA 3, perfect pentru mediul urban.\r\n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comenzi_masini`
+--
+
+CREATE TABLE `comenzi_masini` (
+  `id` int NOT NULL,
+  `tip_vehicul` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_cutie` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_transmisie` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_combustibil` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `producator` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `an_fabricatie_start` int NOT NULL,
+  `an_fabricatie_end` int NOT NULL,
+  `buget_max` decimal(10,2) NOT NULL,
+  `kilometraj_max` int NOT NULL,
+  `judet` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `localitate` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `nume` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `telefon` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
+  `detalii_suplimentare` text COLLATE utf8mb4_general_ci,
+  `data_creare` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -121,8 +148,9 @@ INSERT INTO `poze_masini` (`ID_Poza`, `ID_Masina`, `Cale_Imagine`) VALUES
 (6, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/wvbok0uyctx62-RO/image;s=1000x700'),
 (7, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/afe4baekjxp22-RO/image;s=1000x700'),
 (8, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/2lfnyye4x9cv2-RO/image;s=1000x700'),
-(9, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/wvbok0uyctx62-RO/image;s=1000x700'),
-(10, 1, 'https://frankfurt.apollo.olxcdn.com/v1/files/afe4baekjxp22-RO/image;s=1000x700');
+(11, 3, 'https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InMwY2NmN2syYXpuZDMtQVVUT1ZJVFJPIiwidyI6W3siZm4iOiJxN216NTNiaWZwemstQVVUT1ZJVFJPIiwicyI6IjE2IiwicCI6IjEwLC0xMCIsImEiOiIwIn1dfQ.1SAEC10j5Rp9Rknoi91KHY15TQieC4cyFuttmk7FFkU/image;s=0x450;q=70'),
+(12, 3, 'https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InlpaXo4MXpsZXB5My1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.Dxo8fQs7eWawMHUJhclED8f3mxSs8sgwgnXuSBYWlzs/image;s=0x450;q=70'),
+(13, 3, 'https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6InhzYnA1MWNmMnBlaS1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.cnGWnfRhWi3jYTKGYZj1HTgdWTA4qTM5qygxhpZWQuI/image;s=0x450;q=70');
 
 -- --------------------------------------------------------
 
@@ -146,6 +174,23 @@ INSERT INTO `utilizatori` (`ID_Utilizator`, `Nume_Utilizator`, `Parola`) VALUES
 (3, 'alex_john', 'castravete5'),
 (4, 'laura_johns', 'laurica55$');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vanzari_masini`
+--
+
+CREATE TABLE `vanzari_masini` (
+  `id` int NOT NULL,
+  `marca` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `an_fabricatie` int NOT NULL,
+  `kilometraj` int NOT NULL,
+  `pret` decimal(10,2) NOT NULL,
+  `descriere` text COLLATE utf8mb4_general_ci,
+  `data_postarii` timestamp NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -156,6 +201,12 @@ INSERT INTO `utilizatori` (`ID_Utilizator`, `Nume_Utilizator`, `Parola`) VALUES
 ALTER TABLE `anunturi`
   ADD PRIMARY KEY (`ID_Anunt`),
   ADD KEY `ID_Masina` (`ID_Masina`);
+
+--
+-- Indexes for table `comenzi_masini`
+--
+ALTER TABLE `comenzi_masini`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `contact_dealer`
@@ -184,14 +235,32 @@ ALTER TABLE `utilizatori`
   ADD UNIQUE KEY `Nume_Utilizator` (`Nume_Utilizator`);
 
 --
+-- Indexes for table `vanzari_masini`
+--
+ALTER TABLE `vanzari_masini`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `comenzi_masini`
+--
+ALTER TABLE `comenzi_masini`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `poze_masini`
 --
 ALTER TABLE `poze_masini`
-  MODIFY `ID_Poza` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `ID_Poza` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT for table `vanzari_masini`
+--
+ALTER TABLE `vanzari_masini`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables
