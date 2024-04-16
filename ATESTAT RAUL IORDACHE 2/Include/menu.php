@@ -1,7 +1,7 @@
 <nav>
-    <a href="#">Acasă</a> 
-    <a href="#">Mașini</a>
-    <a href="#">Contact</a>
-    <a href="#">Vinde-ți Mașina</a>
-    <a href="#">Mașini pe Comandă</a>
+    <a href="index.php">Acasă</a> 
+
+    <a href="contact.php">Contact</a>
+    <a href="vinde_masina.php">Vinde-ți Mașina</a>
+    <a href="comanda_masina.php">Mașini pe Comandă</a>
   </nav>

@@ -1,71 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Static/main.css">
-  <title>AutoDeal</title>
-</head>
-<body>
-  <header>
-    <img src="https://us.123rf.com/450wm/themoderncanvas/themoderncanvas2308/themoderncanvas230800008/211186756-auto-sports-car-logo-motor-vehicle-silhouette-emblem-supercar-dealership-icon-automotive-dealer.jpg?ver=6" alt="Logo" height="100" width="100">
-    <h1>AutoDeal</h1>
-  </header>
+<?php
+include("include/header.php");
+include("include/menu.php");
+?>
 
-  <div class="row justify-content-center">
-    <div class="col-md-6 mt-5">
-      <form action="" method="GET">
-        <h2 class="mb-4">Inregistrare</h2>   <a class="nav-link active" aria-current="page" href="index.php">Acasa</a>
-      </li>
-        <div class="form-group mb-2">
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+      <form action="" method="GET" class="bg-black text-white p-4 shadow-sm rounded">
+        <h2 class="mb-4 text-center">Înregistrare</h2>
+        <div class="form-group">
           <label for="username">Nume de utilizator:</label>
-          <input type="text" class="form-control" id="username" placeholder="IonIonescu05">
+          <input type="text" class="form-control bg-black text-white" id="username" name="username" placeholder="IonIonescu05">
         </div>
-        <div class="form-group mb-2">
+        <div class="form-group">
           <label for="email">Adresa de email:</label>
-          <input type="email" class="form-control" id="email" placeholder="ionionescu@gmail.com">
+          <input type="email" class="form-control bg-black text-white" id="email" name="email" placeholder="ionionescu@gmail.com">
         </div>
-        <div class="form-group mb-2">
+        <div class="form-group">
           <label for="password1">Parola:</label>
-          <input type="password" class="form-control" id="password1" placeholder="Introduceti parola">
+          <input type="password" class="form-control bg-black text-white" id="password1" name="password1" placeholder="Introduceți parola">
         </div>
-        <div class="form-group mb-2">
+        <div class="form-group">
           <label for="password2">Rescrie parola:</label>
-          <input type="password" class="form-control" id="password2" placeholder="Introduceti din nou parola">
+          <input type="password" class="form-control bg-black text-white" id="password2" name="password2" placeholder="Introduceți din nou parola">
         </div>
         <div class="row">
           <div class="col">
-            <button type="submit" class="btn btn-primary">Inregistreaza-te</button>
+            <button type="submit" class="btn btn-primary btn-block">Înregistrează-te</button>
           </div>
           <div class="col">
-          <div class="form-text">Ai deja cont? 
-              <a href="logare.php">Logheaza-te</a></div>
+            <div class="form-text text-center mt-2">Ai deja cont? <a href="logare.php">Loghează-te</a></div>
           </div>
         </div>
       </form>
     </div>
   </div>
-  
+</div>
 
-</body> 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<footer class="footer">
+  <div class="container text-center">
+    AutoDeal 2024
+  </div>
+</footer>
 
-<footer>
-    <ul class="nav justify-content-center">
-      <li class="nav-item">
-      <div class="form-text">AutoDeal 2024
-      
-    </ul>
-  </footer>
+</body>
 </html>

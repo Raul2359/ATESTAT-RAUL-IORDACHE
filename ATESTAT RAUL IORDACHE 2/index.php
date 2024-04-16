@@ -27,40 +27,7 @@ include("include/menu.php");
   </div>
 </nav>
   
-</head>
-<div class="search-container">
-  <form method="post" action="login.php">
-    <label for="brand">Marca:</label>
-    <select id="brand" name="brand" required>
-      <option value="audi">Audi</option>
-      <option value="bmw">BMW</option>
-      <option value="mercedes">Mercedes</option>
 
-    </select>
-    <label for="model">Model:</label>
-    <select id="model" name="model" required>
-      <option value="a3">A3</option>
-      <option value="seria 3">Seria 3</option>
-      <option value="x3">X3</option>
-      <option value="e-class">E-CLASS</option>
-    </select>
-    <label for="year">An Fabricatie:</label>
-    <input type="number" id="year" name="year" min="1900" max="2024" required>
-
-    <label for="fuel">Combustibil:</label>
-    <select id="fuel" name="fuel" required>
-      <option value="benzina">Benzina</option>
-      <option value="motorina">Motorina</option>
-    </select>
-    <button type="submit">Cautare</button>
-  </form>
-</div>
-</nav>
-  <div id="rezultateCautare"></div>
-  <style>
-    
-  </style>
-</head>
 <body>
   <h2>MASINI PE STOC</h2>
 <div class="masina-container">
@@ -101,7 +68,7 @@ include("include/menu.php");
     <form>
       <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6Im41ZDJ2ZzZxcmd6bzMtQVVUT1ZJVFJPIn0.qbzo2WCIHqGqeBBGPSSatYxYJpvhVhuxUWDG6hTWA9U/image;s=644x461">
       <br>
-      <button type="submit">Vinde-ti masina.</button>
+      <button type="submit"><a href="vinde_masina.php">Vinde-ți Mașina</a></button>
     </form>
   </div>
   <div class="comanda-masina">
