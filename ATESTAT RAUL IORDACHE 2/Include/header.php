@@ -11,7 +11,7 @@
 <body>
   <header style="background-color: #FF0000; color: #FFFFFF; padding: 20px;">
     <img src="https://us.123rf.com/450wm/themoderncanvas/themoderncanvas2308/themoderncanvas230800008/211186756-auto-sports-car-logo-motor-vehicle-silhouette-emblem-supercar-dealership-icon-automotive-dealer.jpg?ver=6" alt="Logo" height="100" width="100">
-    <h1>AutoDeal</h1>
+    <h1>AUTODEAL</h1>
   </header>
 </body>
 </html>

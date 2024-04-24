@@ -35,17 +35,14 @@ include("include/menu.php");
     <a href="masina1.php?id_masina=4">
         <img src="https://img-eu-2.trovit.com/img2ro/1t1j2nL1g61_/1t1j2nL1g61_.1_12.jpg" alt="BMW SERIA 3">
         <h2>BMW SERIA 3</h2>
-        
- 
-
     <a href="masina1.php?id_masina=1">
         <img src="https://frankfurt.apollo.olxcdn.com/v1/files/snazp1nz4rdy-RO/image;s=1000x700" alt="Audi A4">
         <h2>Audi A4</h2>
-   
     <a href="masina1.php?id_masina=3">
         <img src="https://ireland.apollo.olxcdn.com/v1/files/eyJmbiI6IjJvaWg3ZWU0Y2ttNi1BVVRPVklUUk8iLCJ3IjpbeyJmbiI6InE3bXo1M2JpZnB6ay1BVVRPVklUUk8iLCJzIjoiMTYiLCJwIjoiMTAsLTEwIiwiYSI6IjAifV19.70I09RsqGcGKLXEYIMd7MdtzBX9BQSD_xhOPg0bBA5U/image" alt="Mercedes E-class">
         <h2>Mercedes E-CLASS</h2>
     </a>
+    
 </a>
 </a>
 </div>
@@ -76,7 +73,7 @@ include("include/menu.php");
     <p>Contactează-ne pentru a comanda mașina ta personalizată.</p>
     <img src="https://static.automarket.ro/img/auto_resized/db/article/050/915/968550l-1000x640-b-4ed86d4b.jpg">
     <br>
-    <button type="submit">Comanda masina.</button>
+    <button type="submit">  <a href="comanda_masina.php">Mașini pe Comandă</a>
   </div>
 </body>
 </body>

@@ -3,7 +3,7 @@
 $servername = "localhost"; 
 $username = "root"; 
 $password = "mysql"; 
-$database = "atestatraul"; 
+$database = "atestatraul1"; 
 
 
 $conn = new mysqli($servername, $username, $password, $database);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['marca']) && !empty($_
     
 } else {
    
-    header("Location: vindeti_masina.php?eroare=1");
+    header("Location: vinde_masina.php?eroare=1");
     exit;
 }
 
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $detalii_suplimentare = test_input($_POST['detalii_suplimentare']);
 
        
-        $sql = "INSERT INTO comenzi_masini (id, tip_vehicul, tip_cutie, tip_transmisie, tip_combustibil, producator, model, an_fabricatie_de_la, an_fabricatie_pana_la, buget_euro, nr_kilometri, judet, localitate, nume, email, telefon, detalii_suplimentare) VALUES ('$tip_vehicul', '$tip_cutie', '$tip_transmisie', '$tip_combustibil', '$producator', '$model', '$an_fabricatie_de_la', '$an_fabricatie_pana_la', '$buget_euro', '$nr_kilometri', '$judet', '$localitate', '$nume', '$email', '$telefon', '$detalii_suplimentare')";
+        $sql = "INSERT INTO comenzi_masini ( tip_vehicul, tip_cutie, tip_transmisie, tip_combustibil, producator, model, an_fabricatie_de_la, an_fabricatie_pana_la, buget_euro, nr_kilometri, judet, localitate, nume, email, telefon, detalii_suplimentare) VALUES ('$tip_vehicul', '$tip_cutie', '$tip_transmisie', '$tip_combustibil', '$producator', '$model', '$an_fabricatie_de_la', '$an_fabricatie_pana_la', '$buget_euro', '$nr_kilometri', '$judet', '$localitate', '$nume', '$email', '$telefon', '$detalii_suplimentare')";
 
         if ($conn->query($sql) === TRUE) {
             
