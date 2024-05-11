@@ -1,6 +1,48 @@
 <?php
 include("include/header.php");
 include("include/menu.php");
+
+// Parametrii de conectare la baza de date
+$servername = "localhost";
+$username = "root";
+$password = "mysql";
+$database = "atestatraul2";
+
+// Creează conexiunea
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Verifică conexiunea
+if ($conn->connect_error) {
+    die("Conexiunea la bază de date a eșuat: " . $conn->connect_error);
+}
+
+// Variabila pentru mesajul de succes sau de eroare
+$feedback = "";
+
+// Verifică dacă formularul a fost trimis prin metoda POST
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Colectează datele trimise prin formular
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $message = $_POST["message"];
+
+    // Inserează datele în baza de date folosind o interogare pregătită pentru a preveni injecțiile SQL
+    $stmt = $conn->prepare("INSERT INTO contact_messages (name, email, message) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $message);
+    
+    // Execută interogarea
+    if ($stmt->execute()) {
+        // Mesaj de succes
+        $feedback = "Mesajul tău a fost trimis cu succes!";
+    } else {
+        // Mesaj de eroare
+        $feedback = "Eroare la trimiterea mesajului.";
+    }
+
+    // Închide declarația
+    $stmt->close();
+}
+
 ?>
 
 <div class="container">
@@ -21,7 +63,11 @@ include("include/menu.php");
           <div class="card bg-dark text-white">
             <div class="card-body">
               <h2 class="card-title text-center mb-4">Contactează-ne</h2>
-              <form action="contact_form.php" method="POST">
+              
+              <!-- Afiseaza feedbackul -->
+              <div class="feedback"><?php echo $feedback; ?></div>
+              
+              <form action="" method="POST">
                 <div class="mb-3">
                   <label for="name" class="form-label">Nume:</label>
                   <input type="text" class="form-control bg-dark text-white" id="name" name="name" placeholder="Numele tău">

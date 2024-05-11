@@ -3,7 +3,7 @@
 $servername = "localhost"; 
 $username = "root"; 
 $password = "mysql"; 
-$database = "atestatraul1"; 
+$database = "atestatraul2"; 
 
 
 $conn = new mysqli($servername, $username, $password, $database);
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['marca']) && !empty($_
     
 } else {
    
-    header("Location: vinde_masina.php?eroare=1");
+    header("Location: comanda_masina.php?eroare=1");
     exit;
 }
 

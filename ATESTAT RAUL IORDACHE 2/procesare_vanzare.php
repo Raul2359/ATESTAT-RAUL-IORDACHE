@@ -3,7 +3,7 @@
 $servername = "localhost"; 
 $username = "root"; 
 $password = "mysql"; 
-$database = "atestatraul1"; 
+$database = "atestatraul2"; 
 
 
 $conn = new mysqli($servername, $username, $password, $database);
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($conn->query($sql) === TRUE) {
           
-            header("Location: succes.php");
+            header("Location: vinde_masina.php");
             exit;
         } else {
            
