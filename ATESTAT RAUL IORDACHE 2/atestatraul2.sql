@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Apr 16, 2024 at 06:46 PM
--- Server version: 8.0.31
--- PHP Version: 7.4.33
+-- Gazdă: localhost
+-- Timp de generare: mai 13, 2024 la 09:49 AM
+-- Versiune server: 8.0.31
+-- Versiune PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,26 +18,26 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `atestatraul`
+-- Bază de date: `atestatraul2`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anunturi`
+-- Structură tabel pentru tabel `anunturi`
 --
 
 CREATE TABLE `anunturi` (
   `ID_Anunt` int NOT NULL,
   `ID_Masina` int DEFAULT NULL,
-  `Nume_Vanzator` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Telefon_Vanzator` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Email_Vanzator` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Detalii` text COLLATE utf8mb4_general_ci
+  `Nume_Vanzator` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Telefon_Vanzator` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Email_Vanzator` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Detalii` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `anunturi`
+-- Eliminarea datelor din tabel `anunturi`
 --
 
 INSERT INTO `anunturi` (`ID_Anunt`, `ID_Masina`, `Nume_Vanzator`, `Telefon_Vanzator`, `Email_Vanzator`, `Detalii`) VALUES
@@ -49,45 +49,45 @@ INSERT INTO `anunturi` (`ID_Anunt`, `ID_Masina`, `Nume_Vanzator`, `Telefon_Vanza
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comenzi_masini`
+-- Structură tabel pentru tabel `comenzi_masini`
 --
 
 CREATE TABLE `comenzi_masini` (
   `id` int NOT NULL,
-  `tip_vehicul` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `tip_cutie` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `tip_transmisie` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `tip_combustibil` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `producator` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_vehicul` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_cutie` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_transmisie` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tip_combustibil` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `producator` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `an_fabricatie_start` int NOT NULL,
   `an_fabricatie_end` int NOT NULL,
   `buget_max` decimal(10,2) NOT NULL,
   `kilometraj_max` int NOT NULL,
-  `judet` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `localitate` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `nume` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `telefon` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `detalii_suplimentare` text COLLATE utf8mb4_general_ci,
+  `judet` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `localitate` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `nume` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `telefon` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `detalii_suplimentare` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `data_creare` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact_dealer`
+-- Structură tabel pentru tabel `contact_dealer`
 --
 
 CREATE TABLE `contact_dealer` (
   `ID_Contact_Dealer` int NOT NULL,
-  `Nume_Dealer` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Telefon_Dealer` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Email_Dealer` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Nume_Dealer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Telefon_Dealer` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Email_Dealer` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `contact_dealer`
+-- Eliminarea datelor din tabel `contact_dealer`
 --
 
 INSERT INTO `contact_dealer` (`ID_Contact_Dealer`, `Nume_Dealer`, `Telefon_Dealer`, `Email_Dealer`) VALUES
@@ -96,23 +96,44 @@ INSERT INTO `contact_dealer` (`ID_Contact_Dealer`, `Nume_Dealer`, `Telefon_Deale
 -- --------------------------------------------------------
 
 --
--- Table structure for table `masini`
+-- Structură tabel pentru tabel `contact_messages`
+--
+
+CREATE TABLE `contact_messages` (
+  `name` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(200) COLLATE utf8mb4_general_ci NOT NULL,
+  `message` varchar(2000) COLLATE utf8mb4_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Eliminarea datelor din tabel `contact_messages`
+--
+
+INSERT INTO `contact_messages` (`name`, `email`, `message`) VALUES
+('Raul TEST', 'urszulylaura02@gmail.com', 'TEST'),
+('Raul TEST', 'urszulylaura02@gmail.com', 'TEST'),
+('', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Structură tabel pentru tabel `masini`
 --
 
 CREATE TABLE `masini` (
   `ID_Masina` int NOT NULL,
-  `Marca` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Model` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Marca` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Model` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `An_Fabricatie` int DEFAULT NULL,
   `Pret` decimal(10,2) DEFAULT NULL,
-  `Descriere` text COLLATE utf8mb4_general_ci,
-  `Imagine` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Contact_Nume` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Contact_Telefon` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Descriere` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+  `Imagine` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Contact_Nume` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Contact_Telefon` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `masini`
+-- Eliminarea datelor din tabel `masini`
 --
 
 INSERT INTO `masini` (`ID_Masina`, `Marca`, `Model`, `An_Fabricatie`, `Pret`, `Descriere`, `Imagine`, `Contact_Nume`, `Contact_Telefon`) VALUES
@@ -126,17 +147,17 @@ INSERT INTO `masini` (`ID_Masina`, `Marca`, `Model`, `An_Fabricatie`, `Pret`, `D
 -- --------------------------------------------------------
 
 --
--- Table structure for table `poze_masini`
+-- Structură tabel pentru tabel `poze_masini`
 --
 
 CREATE TABLE `poze_masini` (
   `ID_Poza` int NOT NULL,
   `ID_Masina` int DEFAULT NULL,
-  `Cale_Imagine` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Cale_Imagine` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `poze_masini`
+-- Eliminarea datelor din tabel `poze_masini`
 --
 
 INSERT INTO `poze_masini` (`ID_Poza`, `ID_Masina`, `Cale_Imagine`) VALUES
@@ -155,17 +176,17 @@ INSERT INTO `poze_masini` (`ID_Poza`, `ID_Masina`, `Cale_Imagine`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `utilizatori`
+-- Structură tabel pentru tabel `utilizatori`
 --
 
 CREATE TABLE `utilizatori` (
   `ID_Utilizator` int NOT NULL,
-  `Nume_Utilizator` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `Parola` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Nume_Utilizator` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `Parola` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `utilizatori`
+-- Eliminarea datelor din tabel `utilizatori`
 --
 
 INSERT INTO `utilizatori` (`ID_Utilizator`, `Nume_Utilizator`, `Parola`) VALUES
@@ -177,103 +198,110 @@ INSERT INTO `utilizatori` (`ID_Utilizator`, `Nume_Utilizator`, `Parola`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `vanzari_masini`
+-- Structură tabel pentru tabel `vanzari_masini`
 --
 
 CREATE TABLE `vanzari_masini` (
   `id` int NOT NULL,
-  `marca` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `model` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `marca` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `model` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `an_fabricatie` int NOT NULL,
   `kilometraj` int NOT NULL,
   `pret` decimal(10,2) NOT NULL,
-  `descriere` text COLLATE utf8mb4_general_ci,
+  `descriere` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `data_postarii` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Eliminarea datelor din tabel `vanzari_masini`
+--
+
+INSERT INTO `vanzari_masini` (`id`, `marca`, `model`, `an_fabricatie`, `kilometraj`, `pret`, `descriere`, `data_postarii`) VALUES
+(1, 'BMW', 'SERIA 3', 2022, 123456, 2200.00, 'MASINA BUNA', '2024-05-13 09:48:45');
+
+--
+-- Indexuri pentru tabele eliminate
 --
 
 --
--- Indexes for table `anunturi`
+-- Indexuri pentru tabele `anunturi`
 --
 ALTER TABLE `anunturi`
   ADD PRIMARY KEY (`ID_Anunt`),
   ADD KEY `ID_Masina` (`ID_Masina`);
 
 --
--- Indexes for table `comenzi_masini`
+-- Indexuri pentru tabele `comenzi_masini`
 --
 ALTER TABLE `comenzi_masini`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contact_dealer`
+-- Indexuri pentru tabele `contact_dealer`
 --
 ALTER TABLE `contact_dealer`
   ADD PRIMARY KEY (`ID_Contact_Dealer`);
 
 --
--- Indexes for table `masini`
+-- Indexuri pentru tabele `masini`
 --
 ALTER TABLE `masini`
   ADD PRIMARY KEY (`ID_Masina`);
 
 --
--- Indexes for table `poze_masini`
+-- Indexuri pentru tabele `poze_masini`
 --
 ALTER TABLE `poze_masini`
   ADD PRIMARY KEY (`ID_Poza`),
   ADD KEY `ID_Masina` (`ID_Masina`);
 
 --
--- Indexes for table `utilizatori`
+-- Indexuri pentru tabele `utilizatori`
 --
 ALTER TABLE `utilizatori`
   ADD PRIMARY KEY (`ID_Utilizator`),
   ADD UNIQUE KEY `Nume_Utilizator` (`Nume_Utilizator`);
 
 --
--- Indexes for table `vanzari_masini`
+-- Indexuri pentru tabele `vanzari_masini`
 --
 ALTER TABLE `vanzari_masini`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pentru tabele eliminate
 --
 
 --
--- AUTO_INCREMENT for table `comenzi_masini`
+-- AUTO_INCREMENT pentru tabele `comenzi_masini`
 --
 ALTER TABLE `comenzi_masini`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `poze_masini`
+-- AUTO_INCREMENT pentru tabele `poze_masini`
 --
 ALTER TABLE `poze_masini`
   MODIFY `ID_Poza` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT for table `vanzari_masini`
+-- AUTO_INCREMENT pentru tabele `vanzari_masini`
 --
 ALTER TABLE `vanzari_masini`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- Constraints for dumped tables
+-- Constrângeri pentru tabele eliminate
 --
 
 --
--- Constraints for table `anunturi`
+-- Constrângeri pentru tabele `anunturi`
 --
 ALTER TABLE `anunturi`
   ADD CONSTRAINT `anunturi_ibfk_1` FOREIGN KEY (`ID_Masina`) REFERENCES `masini` (`ID_Masina`);
 
 --
--- Constraints for table `poze_masini`
+-- Constrângeri pentru tabele `poze_masini`
 --
 ALTER TABLE `poze_masini`
   ADD CONSTRAINT `poze_masini_ibfk_1` FOREIGN KEY (`ID_Masina`) REFERENCES `masini` (`ID_Masina`);
