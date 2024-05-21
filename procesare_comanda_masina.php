@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $detalii_suplimentare = test_input($_POST['detalii_suplimentare']);
 
        
-        $sql = "INSERT INTO comenzi_masini ( tip_vehicul, tip_cutie, tip_transmisie, tip_combustibil, producator, model, an_fabricatie_de_la, an_fabricatie_pana_la, buget_euro, nr_kilometri, judet, localitate, nume, email, telefon, detalii_suplimentare) VALUES ('$tip_vehicul', '$tip_cutie', '$tip_transmisie', '$tip_combustibil', '$producator', '$model', '$an_fabricatie_de_la', '$an_fabricatie_pana_la', '$buget_euro', '$nr_kilometri', '$judet', '$localitate', '$nume', '$email', '$telefon', '$detalii_suplimentare')";
+        $sql = "INSERT INTO comenzi_masini ( tip_vehicul, tip_cutie, tip_transmisie, tip_combustibil, producator, model, an_fabricatie_de_la, an_fabricatie_pana_la, buget_euro, nr_kilometri, judet, localitate, nume, email, telefon, detalii_suplimentare) VALUES ('$tip_vehicul', '$tip_cutie', '$tip_transmisie', '$tip_combustibil', '$producator', '$model', $an_fabricatie_de_la, $an_fabricatie_pana_la, '$buget_euro', $nr_kilometri, '$judet', '$localitate', '$nume', '$email', '$telefon', '$detalii_suplimentare')";
 
         if ($conn->query($sql) === TRUE) {
             
